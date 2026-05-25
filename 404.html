@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404: Rota Espacial - Skylike</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: radial-gradient(circle at center, #111726 0%, #07090e 100%);
+            color: #ffffff;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+            perspective: 1000px;
+        }
+
+        /* Fundo de Estrelas Animadas */
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: transparent url('https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?q=80&w=1000' /* Apenas uma textura sutil */) repeat;
+            opacity: 0.15;
+            z-index: 1;
+            animation: spaceMove 100s linear infinite;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 2;
+            padding: 20px;
+            max-width: 600px;
+        }
+
+        /* O Número 404 Flutuante */
+        .error-code {
+            font-size: 120px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #00d2ff 0%, #0066ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(0, 114, 255, 0.3);
+            animation: float 4s ease-in-out infinite;
+            letter-spacing: 5px;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            color: #e2e8f0;
+        }
+
+        p {
+            font-size: 16px;
+            color: #94a3b8;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        /* Botão Estilo Painel de Nave */
+        .btn-back {
+            display: inline-block;
+            padding: 14px 32px;
+            font-size: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #00d2ff;
+            text-decoration: none;
+            border: 2px solid #0055ff;
+            border-radius: 50px;
+            background: rgba(0, 85, 255, 0.05);
+            box-shadow: 0 0 15px rgba(0, 85, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background: #0055ff;
+            color: #fff;
+            box-shadow: 0 0 25px rgba(0, 85, 255, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Definição das Animações CSS */
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+        }
+
+        @keyframes spaceMove {
+            from { background-position: 0 0; }
+            to { background-position: -1000px 500px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="stars"></div>
+
+    <div class="container">
+        <div class="error-code">404</div>
+        <h1>Esta rota foi para o espaço!</h1>
+        <p>A página que você procura sumiu no infinito. O ecossistema Skylike continua expandindo, mas esse link específico não existe mais.</p>
+        <a href="/" class="btn-back">Voltar para a Nave Mãe</a>
+    </div>
+
+</body>
+</html>
